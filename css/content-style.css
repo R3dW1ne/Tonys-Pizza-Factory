@@ -1,0 +1,352 @@
+/*
+#############################
+|                           |
+|     Content-style.css     |
+|                           |
+#############################
+*/
+
+
+
+
+
+/*
+#############################
+|                           |
+|         index.html        |
+|                           |
+#############################
+*/
+
+
+/* Schrift über Produktbild */
+.products-preview{
+    align-items: center;
+}                                   
+
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+.container img{
+    padding: 0 20px 0 20px;
+}
+
+
+.des-product-img{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/*------- END index.html -------*/
+
+
+
+
+
+/*
+#############################
+|                           |
+|         pizza.html        |
+|         salad.html        |
+|       softdrinks.html     |
+|                           |
+#############################
+*/
+
+
+/* Grid für Produkte */
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5%;
+    padding: 10px 30px 10px 30px;
+  }
+
+.grid-item{
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.grid-item:hover{
+    transform: scale(1.02, 1.02);
+    box-shadow: 3px 3px 3px black;
+}
+
+.price, .name{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.name{
+    text-align: left;
+}
+
+.beschreibung{
+    text-align: left;
+    font-size: 15px;
+}
+
+.shopping-cert:hover{
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1280px){
+    .grid-container{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .grid-container{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .grid-container{
+        grid-template-columns: auto;
+    }
+}
+
+/* ------- END pizza.html ------- */
+
+
+
+
+/*
+#############################
+|                           |
+|       feedback.html       |
+|                           |
+#############################
+*/
+
+.grid-container-form{
+    display: grid;
+    grid-template-columns: 50% 400px;
+    grid-column-gap: 50px;
+    /* padding: 50px; */
+    font-size: 20px;
+}
+
+
+.grid-container-form div{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.grid-container-div{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.grid-item-form{
+    text-align: right;
+    font-weight: bold;
+}
+
+
+.form-textfield{
+    width: 400px;
+    border: solid 3px black;
+}
+
+#name-error{
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+
+#email-error {
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+
+#textfield-error {
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+
+#submit {
+    box-shadow: none;
+}
+
+#submit:hover {
+    cursor: pointer;
+}
+
+#rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;   
+}
+
+#showPizzaRatingBtn {
+    margin-bottom: 10px;
+}
+
+#showPizzaRatingBtn:hover {
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#rating div{
+    width: 500px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 18px;
+}
+
+#rating div p{
+    margin: 5px;
+}
+
+
+#comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+#showCommentsBtn {
+    margin-bottom: 10px;
+}
+
+#showCommentsBtn:hover {
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.comment-item {
+    border: 2px solid rgb(0, 0, 0);
+    width: 500px;
+    height: 150px;
+    margin: 5px;
+}
+
+.comment-item h3 {
+    width: 500px;
+}
+
+.comment-item textarea {
+    width: 470px;
+    height: 100px;
+    resize: none;
+    font-style: italic;
+    border: 0;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 960px){
+    .grid-container-form{
+        grid-template-columns: 40% 400px;
+    }
+}
+
+
+@media screen and (max-width: 830px){
+    .grid-container-form{
+        grid-template-columns: 40% 300px;
+    }
+    .like{
+        flex-direction: column;
+    }
+    .prices{
+        flex-direction: column;
+    }
+
+    .form-textfield {
+        width: 300px;
+    }
+}
+
+
+@media screen and (max-width: 640px){
+    .grid-container-form{
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .grid-item-form{
+        text-align: center;
+        padding: 10px 0 10px 0;
+    }
+    
+}
+
+@media screen and (max-width: 540px){
+    
+
+    
+    #rating div{
+        width: 350px;     
+    }
+
+    .comment-item {
+        width: 350px;
+        height: 150px;
+    }
+
+    .comment-item h3 {
+        width: 350px;
+    }
+
+    .comment-item textarea {
+        width: 320px;
+        height: 100px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 400px){
+    
+    
+    .form-textfield {
+        width: 200px;
+    }
+    
+    #rating div{
+        width: 300px;
+    }
+
+    .comment-item {
+        width: 300px;
+        height: 150px;
+    }
+    
+    .comment-item h3 {
+        width: 300px;
+    }
+    
+    .comment-item textarea {
+        width: 270px;
+        height: 100px;
+    }
+
+}
+
+
+
+
+/* ------- END feedback.html ------- */

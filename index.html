@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--=========================================== Start Head ==========================================-->
+
+<head>
+    <!--Definiert Informationen über das Dokument-->
+
+    <!--Metadaten über Dokument-->
+    <meta charset="UTF-8">
+    <!--Definiert Zeichensprache-->
+    <meta name="description" content="Website um Pizzen zu bestellen">
+    <!--Beschreibung der Website-->
+    <meta name="keywords" content="Pizza">
+    <!--Definiert Schlüsselwörter für Suchmaschienen-->
+    <meta name="author" content="Chris Wuethrich">
+    <!--Autor der Website-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <!--Lässt die Website auf allen Geräten gut aussehen! initial-scale=1, minimum-scale=1 wird für korrekte Hamburger-Menu Anzeoge benötigt!-->
+    <!--<meta http-equiv="refresh" content="30">-->
+    <!--Ladet dokument jede 30 Sekunden neu-->
+
+
+    <!--Verlinkung auf ein anderes Dokument-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!--Stylesheet für Standart design-->
+    <link rel="stylesheet" type="text/css" href="../css/content-style.css">
+    <!--Stylesheet für Content - Individuel-->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"-->
+    <!--Verkleinert die Navigation für kleinere Geräte-->
+
+
+
+    <!--Titel der Website-->
+    <title>Tony's Pizza Factory</title>
+
+</head>
+
+<!--=========================================== End Head ==========================================-->
+
+
+
+
+<!--=========================================== Start Body ==========================================-->
+
+<body>
+    <!--Body des Dokuments mit Header, Main und Footer-->
+
+
+
+    <!--=========================================== Start Header ==========================================-->
+
+
+    <header>
+        <!--Header der Seite inkl. Logo, Links und Hamburgerlinien.-->
+
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <h3>Tony's Pizza Factory</h3>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="../html/pizza.html" class="nav-link">
+                        <h2>Pizza</h2>
+                    </a>
+                </li>
+                <!--Navigationseintrag auf die Pizzaseite.-->
+                <li>
+                    <a href="../html/salad.html" class="nav-link">
+                        <h2>Salad</h2>
+                    </a>
+                </li>
+                <!--Navigationseintrag auf die Salatseite.-->
+                <li>
+                    <a href="../html/softDrinks.html" class="nav-link">
+                        <h2>Softdrinks</h2>
+                    </a>
+                </li>
+                <!--Navigationseintrag auf die Getränkeseite.-->
+                <li>
+                    <a href="../html/feedback.html" class="nav-link">
+                        <h2>Feedback</h2>
+                    </a>
+                </li>
+                <!--Navigationseintrag auf die Feedbackseite.-->
+            </ul>
+            <div class="burger">
+                <div class="line1"></div><!-- Linie 1 des Burger Menüs-->
+                <div class="line2"></div><!-- Linie 2 des Burger Menüs-->
+                <div class="line3"></div><!-- Linie 3 des Burger Menüs-->
+            </div>
+
+            <script src="../js/hamburgerMenu.js"></script><!-- script hamburgerMenu.js einbinden-->
+
+
+        </nav>
+        <!--Ende Inhaltsverzeichnis-->
+    </header>
+
+
+    <!--=========================================== End Header ==========================================-->
+
+
+
+
+    <!--=========================================== Start Content ==========================================-->
+
+    <main>
+        <div class="main-body">
+            <div class="page-title">
+                <!--Titel, ist auf allen seiten gleich-->
+                <div>
+                    <h1>Welcome to Tony's Pizza Factory</h1>
+                </div>
+            </div>
+
+
+            <div class="restaurant">
+                <a href="../index.html"><img src="./../pictures/images.jpg" alt="Tony's Pizza Factory von innen"
+                        class="mainImage"></a>
+            </div>
+
+            <div class="products-preview flex-container flex-justify-center">
+                <!--Eine Flexbox Variante mit eigenen Klassen verteilt um die Art des Designs bereits im HTML zu erkennen-->
+                <div class="container">
+                    <img src="../pictures/pizza/giardinaPizzaSmall.jpg" alt="Pizza">
+                    <div class="des-product-img">
+                        <a class="textdeco-null" href="../html/pizza.html">Pizza</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../pictures/salad/rucolaSaladSmall.jpg" alt="Salad">
+                    <div class="des-product-img">
+                        <a class="textdeco-null" href="../html/salad.html">Salad</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../pictures/softdrinks/drinks.png" alt="Softdrinks">
+                    <div class="des-product-img">
+                        <a class="textdeco-null" href="../html/softDrinks.html">Softdrinks</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--=========================================== End Content =============================================-->
+
+
+
+
+    <!--=========================================== Start Footer =============================================-->
+
+
+    <footer>
+        <div class="footer">
+
+            <div class="opening-time">
+                <p>Hours:<br>
+                    Mon-Thu: 11 a.m. - 23 p.m.<br>
+                    Fri-Sat: 11 a.m. - 24 p.m.<br>
+                    Sunday closed<br></p>
+            </div>
+
+            <div></div>
+
+            <div class="zitat">
+                <p><i>
+                        "The Pizzeria is a place I have been
+                        wanting to visit for a long time. The
+                        reason being their <a href="../html/pizza.html#rusticaPizza">Rustica&nbsp;pizza</a> which
+                        absolutely blew me away" - Jimmy
+                    </i></p>
+            </div>
+
+            <div></div>
+
+            <div class="address">
+
+                <p>Adress:<br>
+                    Tony's Pizza Factory<br>
+                    2122 N Clark St<br>
+                    Chicago, IL 60614, USA<br>
+                    <a href="https://goo.gl/maps/8PjcNcQAra7v6baV8">
+                        Find us on Google Maps
+                    </a>
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!--=========================================== End Footer =============================================-->
+
+
+
+</body>
+
+<!--=========================================== End Body ==========================================-->
+
+</html>

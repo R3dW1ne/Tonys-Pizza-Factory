@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--=========================================== Start Head ==========================================-->
+
+<head>
+    <!--Definiert Informationen über das Dokument-->
+
+    <!--Metadaten über Dokument-->
+    <meta charset="UTF-8">
+    <!--Definiert Zeichensprache-->
+    <meta name="description" content="Website um Pizzen zu bestellen">
+    <!--Beschreibung der Website-->
+    <meta name="keywords" content="Pizza">
+    <!--Definiert Schlüsselwörter für Suchmaschienen-->
+    <meta name="author" content="Chris Wuethrich">
+    <!--Autor der Website-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <!--Lässt die Website auf allen Geräten gut aussehen! initial-scale=1, minimum-scale=1 wird für korrekte Hamburger-Menu Anzeoge benötigt!-->
+    <!--<meta http-equiv="refresh" content="30">-->
+    <!--Ladet dokument jede 30 Sekunden neu-->
+
+
+    <!--Verlinkung auf ein anderes Dokument-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!--Stylesheet für Standart design-->
+    <link rel="stylesheet" type="text/css" href="../css/content-style.css">
+    <!--Stylesheet für Content - Individuel-->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"-->
+    <!--Verkleinert die Navigation für kleinere Geräte-->
+
+
+
+    <!--Titel der Website-->
+    <title>Tony's Pizza Factory</title>
+
+</head>
+
+<!--=========================================== End Head ==========================================-->
+
+
+
+
+<!--=========================================== Start Body ==========================================-->
+
+<body>
+    <!--Body des Dokuments mit Header, Main und Footer-->
+
+
+
+    <!--=========================================== Start Header ==========================================-->
+
+
+    <header>
+        <!--Header der Seite inkl. Logo, Links und Hamburgerlinien.-->
+
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <h3>Tony's Pizza Factory</h3>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../html/pizza.html" class="nav-link">
+                        <h2>Pizza</h2>
+                    </a></li>
+                <!--Navigationseintrag auf die Pizzaseite.-->
+                <li><a href="../html/salad.html" class="nav-link">
+                        <h2>Salad</h2>
+                    </a></li>
+                <!--Navigationseintrag auf die Salatseite.-->
+                <li><a href="../html/softDrinks.html" class="nav-link">
+                        <h2>Softdrinks</h2>
+                    </a></li>
+                <!--Navigationseintrag auf die Getränkeseite.-->
+                <li><a href="../html/feedback.html" class="nav-link">
+                        <h2>Feedback</h2>
+                    </a></li>
+                <!--Navigationseintrag auf die Feedbackseite.-->
+            </ul>
+            <div class="burger">
+                <div class="line1"></div><!-- Linie 1 des Burger Menüs-->
+                <div class="line2"></div><!-- Linie 2 des Burger Menüs-->
+                <div class="line3"></div><!-- Linie 3 des Burger Menüs-->
+            </div>
+
+            <script src="../js/hamburgerMenu.js"></script><!-- script hamburgerMenu.js einbinden-->
+
+
+        </nav>
+        <!--Ende Inhaltsverzeichnis-->
+    </header>
+
+
+    <!--=========================================== End Header ==========================================-->
+
+
+
+
+
+    <!--=========================================== Start Content ==========================================-->
+
+    <main>
+        <div class="page-title">
+            <h1>Tell us what you think</h1>
+        </div>
+
+        <div>
+
+            <form onsubmit="return false" class="grid-container-form">
+                <!-- Grid mit 2 Spalten und 6 Zeilen -->
+
+                <div>
+                    <p class="grid-item-form">How do you like our pizza?</p>
+                </div>
+                <!--Spalte 1, Zeile 1-->
+                <div class="like flex-container flex-justify-space_between">
+                    <!--Spalte 2, Zeile 1-->
+                    <div><label><input type="radio" name="pizzalike" value="awesome" checked>&nbsp;Awesome</label></div>
+                    <!--Checked = Standartmässig ausgewählt, &nbsp; = Abstand zwischen button und Text-->
+                    <div><label><input type="radio" name="pizzalike" value="good">&nbsp;Good</label></div>
+                    <div><label><input type="radio" name="pizzalike" value="okay">&nbsp;Okay</label></div>
+                    <div><label><input type="radio" name="pizzalike" value="poor">&nbsp;Poor</label></div>
+                </div>
+
+
+
+                <div>
+                    <p class="grid-item-form">What do you think about our prices?</p>
+                </div>
+                <!--Spalte 1, Zeile 2-->
+                <div class="prices flex-container flex-justify-space_between">
+                    <!--Spalte 2, Zeile 2-->
+                    <div><label><input type="radio" name="pricelike" value="fair" checked>&nbsp;Fair</label></div>
+                    <div><label><input type="radio" name="pricelike" value="good">&nbsp;Okay</label></div>
+                    <div><label><input type="radio" name="pricelike" value="expensive">&nbsp;Expensive</label></div>
+                </div>
+
+
+
+                <div>
+                    <p class="grid-item-form">Your name?</p>
+                </div>
+                <!--Spalte 1, Zeile 3-->
+                <div>
+                    <!--Spalte 2, Zeile 3-->
+                    <label>
+                        <input class="form-textfield" type="text" id="name">
+                    </label>
+                </div>
+                
+                <div><p class=" grid-item-form"></p>
+                </div>
+
+                <div id="name-error">
+                    <p></p>
+                </div>
+
+
+                <div>
+                    <p class="grid-item-form">Your e-Mail address?</p>
+                </div>
+                <!--Spalte 1, Zeile 4-->
+                <div>
+                    <!--Spalte 2, Zeile 4-->
+                    <label>
+                        <input class="form-textfield" id="email" type="email">
+                    </label>
+                </div>
+                
+
+
+                <div><p class=" grid-item-form"></p>
+                </div>
+
+                <div id="email-error">
+                    <p></p>
+                </div>
+
+
+
+                <div>
+                    <p class="grid-item-form">What can we do better?</p>
+                </div>
+                <!--Spalte 1, Zeile 5-->
+                <div>
+                    <!--Spalte 2, Zeile 5-->
+                    <label for="improvement">
+                        <textarea class="form-textfield" name="improvement" id="improvement" cols="30"
+                            rows="10"></textarea>
+                    </label>
+                </div>
+
+                <div>
+                    <p class="grid-item-form"></p>
+                </div>
+
+                <div id="textfield-error">
+                    <p></p>
+                </div>
+
+                <div></div>
+                <!--Spalte 1, Zeile 6, Leeres Feld-->
+                <div class="grid-item-form"><input type="submit" id="submit" disabled value="send"
+                        onclick="sendFeedback()" onmouseover="submitHoverEffectOn()" onmouseout="submitHoverEffectOff()"></div>
+                <!--Spalte 2, Zeile 6-->
+
+
+            </form>
+
+            <div class="rating" id="rating">
+                    <button id="showPizzaRatingBtn" onclick="getRating()">Show Pizza Ratings</button>
+            </div>
+
+            <div class="comments" id="comments">
+                <div>
+                    <button id="showCommentsBtn" onclick="getComments()" >Show Comments</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--=========================================== End Content ==========================================-->
+
+
+
+
+    <!--=========================================== Start Footer =============================================-->
+
+
+    <footer>
+        <div class="footer">
+
+            <div class="opening-time">
+                <p>Hours:<br>
+                    Mon-Thu: 11 a.m. - 23 p.m.<br>
+                    Fri-Sat: 11 a.m. - 24 p.m.<br>
+                    Sunday closed<br></p>
+            </div>
+
+            <div></div>
+
+            <div class="zitat">
+                <p><i>
+                        "The Pizzeria is a place I have been
+                        wanting to visit for a long time. The
+                        reason being their <a href="../html/pizza.html#rusticaPizza">Rustica&nbsp;pizza</a> which
+                        absolutely blew me away" - Jimmy
+                    </i></p>
+            </div>
+
+            <div></div>
+
+            <div class="address">
+
+                <p>Adress:<br>
+                    Tony's Pizza Factory<br>
+                    2122 N Clark St<br>
+                    Chicago, IL 60614, USA<br>
+                    <a href="https://goo.gl/maps/8PjcNcQAra7v6baV8">
+                        Find us on Google Maps
+                    </a>
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!--=========================================== End Footer =============================================-->
+
+    <script src="../js/feedbackValidation.js"></script>
+    <script src="../js/feedbackPost.js"></script>
+
+</body>
+
+<!--=========================================== End Body ==========================================-->
+
+</html>

@@ -1,0 +1,520 @@
+/*
+#############################
+|                           |
+|         style.css         |
+|                           |
+#############################
+*/
+
+
+
+
+
+/*
+#############################
+|                           |
+|        All Element        |
+|             *             |
+#############################
+*/
+
+
+*{
+    margin: 0;                                  /* Margin im ganzen Dekument auf 0 */
+    padding: 0;                                 /* Padding im ganzen Dekument auf 0 */
+    box-sizing: border-box;
+    
+}
+/* ======= END All Element ======= */
+
+
+
+
+
+/* ------- HTML ------- */
+html{
+    height: 100%;
+}
+/* ======= HTML END ======= */
+
+
+
+/*
+#############################
+|                           |
+|           Body            |
+|                           |
+#############################
+*/
+body{
+    font-family: "Comic Sans MS", sans-serif;   /* Schriftart */
+    font-size: 100%;
+    min-height: 100%;
+    display: grid;
+}
+/* ======= Body END ======= */
+
+
+
+
+
+/*
+#############################
+|                           |
+|          Header           |
+|                           |
+#############################
+*/
+
+
+
+
+
+nav{
+    display: flex;                            /* Elemente in Nav sind nebeneinander */
+    justify-content: space-between;            /* Grosser Abstand zwischen den Elementen in Nav */
+    align-items: center;                      /* Vertikale Ausrichtung der Elemente */
+    min-height: 10vh;                          /*  */
+    background-image: linear-gradient(-90deg, #3296e7, #584fa7);              /*  */
+    font-family: 'Comic Sans MS', sans-serif;         /*  */
+    border: 3px solid rgb(38, 17, 160);
+}
+
+
+.logo{
+    
+    text-transform: uppercase;                /*  */
+    letter-spacing: 5px;                      /*  */
+    font-size: 20px;                          /*  */
+    padding-left: 30px;
+    
+}
+
+.logo a{
+    color: rgb(36, 32, 32);                     /*  */
+    text-decoration: none;
+}
+
+.nav-links{
+    display: flex;                            /*  */
+    justify-content: space-around;            /*  */
+    width: 35%;                               /*  */
+}
+
+.nav-links li{
+    list-style: none;                         /*  Punkte von Liste entfernen */
+    padding: 0 5px 0 5px;
+}
+
+.nav-links a{
+    color: rgb(36, 32, 32);             /*  */
+    text-decoration: none;                   /*  */
+    letter-spacing: 3px;                     /*  */
+    font-weight: bold;                       /*  */
+    font-size: 14px;                         /*  */
+}
+
+
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(36, 32, 32);
+    margin: 5px;
+    transition: all 0.8s ease;
+}
+
+
+
+@media screen and (max-width: 1434px){
+
+    .nav-links{
+        width: 45%;
+    }
+
+}
+
+
+@media screen and (max-width:1024px){
+
+    .logo h3{
+        font-size: 22px;
+    }
+
+    .nav-links{
+        width: 50%;
+    }
+
+
+}
+
+
+@media screen and (max-width:870px){
+    html body{
+        overflow-x: hidden;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .nav-links{
+        position: fixed;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-image: linear-gradient(-90deg, #3296e7, #584fa7);;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        border-left: 3px solid rgb(38, 17, 160);
+        border-top: 3px solid rgb(38, 17, 160);
+        border-bottom: 3px solid rgb(38, 17, 160);
+        z-index: 1;
+        border-radius: 20% 0 0 20%;
+    }
+
+    
+    .nav-links li{
+        opacity: 0;
+    }
+
+
+    .nav-link{
+        
+        text-transform: uppercase;
+        padding: 10px 0;
+    }
+
+    .nav-link::before,
+    .nav-link::after{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: rgb(36, 32, 32);
+        position: absolute;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 0.5s;
+    }
+
+    .nav-link::after{
+        bottom: 0;
+        transform-origin: right;
+    }
+
+    .nav-link::before{
+        top: 0;
+        transform-origin: left;
+    }
+
+    .nav-link:hover::before,
+    .nav-link:hover::after{
+        transform: scaleX(1);
+    }
+
+
+
+
+    .burger{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .logo h3{
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+}
+
+@media screen and (max-width: 380px){
+    .nav-link h2{
+        font-size: 0.9em;
+    }
+
+    .logo h3{
+        font-size: 10px;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+}
+
+
+
+/* ======= Header END ======= */
+
+
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-405deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(405deg) translate(-5px,-6px);
+}
+
+/* ======= Navigation END ======= */
+
+
+
+
+
+/*
+#############################
+|                           |
+|           Main            |
+|                           |
+#############################
+*/
+
+
+.page-title{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+.restaurant{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+
+}
+
+
+.mainImage{
+    width: 650px;
+}
+
+
+
+.textdeco-null{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.textdeco-null:hover{
+    font-size: 120%;
+}
+
+
+@media screen and (max-width:1024px){
+
+
+    .products-preview{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    /* Ausblenden des Menüs für die Einblendung des Hamburgersymbols  */
+
+
+
+    .mainImage{
+        width: 500px;
+    }
+
+
+    .products-preview{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products-preview div img{
+        /*height: 250.0pt;*/
+        width: auto;
+    }
+}
+
+
+@media screen and (max-width: 620px){
+    .mainImage{
+        width: 400px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 500px){
+
+    .page-title{
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+
+    .mainImage{
+        width: 250px;
+    }
+
+    .products-preview div img{
+        width: 150px;
+
+    }
+
+    .textdeco-null{
+        font-size: 25px;
+    }
+
+
+}
+
+.page-title div{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}                                               /* Seitentitel verkleinern für Responsive Design */
+
+
+
+/* ======= Main END ======= */
+
+
+
+
+/*
+#############################
+|                           |
+|          Footer           |
+|                           |
+#############################
+*/
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(-90deg, #3296e7, #584fa7);;
+    border: solid 3px rgb(38, 17, 160);;
+    flex-direction: row;
+    min-height: 12vh;
+}
+
+
+.opening-time {
+    padding-left: 30px;
+    min-width: 225px;
+}
+
+.address{
+    padding-right: 30px;
+    min-width: 225px;
+
+}
+
+@media screen and (max-width: 741px){
+
+    .footer{
+        flex-direction: column;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    /* .item{
+        flex-direction: row;
+    } */
+
+    .footer div{
+        width: 225px;
+    }
+
+    .opening-time{
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+
+    .zitat{
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .address{
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+
+}
+
+
+/* ======= Footer END ======= */
+
+
+
+
+
+/*
+#############################
+|                           |
+|       Build Elements      |
+|                           |
+#############################
+*/
+
+
+/* ------- Flex Container -------- */
+.flex-container{
+    display: flex;
+}
+
+
+.flex-justify-space_between{
+    justify-content: space-between;
+}
+
+.flex-justify-space_around{
+    justify-content: space-around;
+}
+
+
+.flex-justify-center{
+    justify-content: center;
+}
+
+
+/* ======= Flex Container ======= */
+
+
+/* ------- Background Color Header & Footer -------- */
